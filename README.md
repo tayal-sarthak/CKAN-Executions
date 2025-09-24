@@ -31,7 +31,7 @@ Please refer to their original work for a comprehensive understanding of the mat
     ```
 
 - CIFAR-10 / CIFAR-100
-  - The script is self‑contained and uses only files in this repo (it does not depend on `torch-conv-kan-main`).
+  - The script is self‑contained and uses only files in this repo.
   - Open `CIFARexecution.py` and set `dataset_name = "cifar10"` or `"cifar100"`.
   - Run:
     ```bash
