@@ -27,7 +27,7 @@ Please refer to their original work for a comprehensive understanding of the mat
   - Ensure PyTorch and `torchvision` are installed.
   - Run:
     ```bash
-    python MNISTexecution.py
+    python3 MNISTexecution.py
     ```
 
 - CIFAR-10 / CIFAR-100
@@ -35,7 +35,7 @@ Please refer to their original work for a comprehensive understanding of the mat
   - Open `CIFARexecution.py` and set `dataset_name = "cifar10"` or `"cifar100"`.
   - Run:
     ```bash
-    python CIFARexecution.py
+    python3 CIFARexecution.py
     ```
   - The script auto-selects device: `cuda` (NVIDIA), `mps` (Apple Silicon), or `cpu`.
 
