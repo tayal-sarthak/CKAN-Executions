@@ -17,17 +17,27 @@ Please refer to their original work for a comprehensive understanding of the mat
 *   `convolution.py`: Low-level convolutional operations for KANs.
 *   `KANConv.py`: KAN-based convolutional layer implementations.
 *   `KANLinear.py`: Core Kolmogorov-Arnold Network (KAN) linear layer.
-*   `test.py`: Defines the `KANC_MLP` model architecture.
-*   `run_model.py`: Script to train and test the `KANC_MLP` model on MNIST. (By me)
+*   `test.py`: Defines the `KANC_MLP` model architecture (MNIST-sized).
+*   `MNISTexecution.py`: simple trainer for MNIST using `KANC_MLP`.
+*   `CIFARexecution.py`: simple trainer for CIFAR-10/100 using C-KAN conv layers.
 
 ## Usage
-To run the MNIST demonstration:
-1.  Ensure you have PyTorch and `torchvision` installed.
-2.  Execute `run_model.py` using your Python 3 interpreter:
+
+- MNIST
+  - Ensure PyTorch and `torchvision` are installed.
+  - Run:
     ```bash
-    /usr/local/bin/python3 run_model.py
+    python MNISTexecution.py
     ```
-    (Note: The script is currently configured to use a 10% subset of MNIST training data and a smaller `grid_size` for faster demonstration.)
+
+- CIFAR-10 / CIFAR-100
+  - The script is self‑contained and uses only files in this repo (it does not depend on `torch-conv-kan-main`).
+  - Open `CIFARexecution.py` and set `dataset_name = "cifar10"` or `"cifar100"`.
+  - Run:
+    ```bash
+    python CIFARexecution.py
+    ```
+  - The script auto-selects device: `cuda` (NVIDIA), `mps` (Apple Silicon), or `cpu`.
 
 ## License
 This is distributed under the MIT License. See the `LICENSE` file for more details.
